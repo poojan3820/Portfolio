@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Front-end Developer</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+    body {
+     background: linear-gradient(-45deg, #3ad793, #210a7c, #0b4e51, #ccf2e9);
+     background-size: 400% 400%;
+     animation: gradientFlow 10s ease infinite;
+     color: #fff;
+     font-family: 'Segoe UI', sans-serif;
+    }
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+    .hero {
+      padding: 100px 200px 30px;
+
+    }
+    .hero h1 {
+      font-size: 4.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 1.3;
+    } 
+    .btn-gradient {
+      background: linear-gradient(to right, #29b09c, #1cc4d7);
+      border: none;
+      color: rgb(13, 2, 2);
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .about-me {
+      padding: 40px 20px;
+    }
+    .about-me img {
+      border: 5px solid #f0f3f4;
+      border-radius: 5px;
+      width: 100%;
+      max-width: 250px;
+    }
+    .portfolio-tabs {
+      text-align: center;
+      margin-top: 40px;
+    }
+    .portfolio-tabs a {
+      color: rgb(255, 255, 255);
+      margin: 0 15px;
+      font-weight: 900;
+    }
+    .project {
+      margin: 40px 0;
+    }
+    .project img {
+      width: 100%;
+      border: 5px solid hsl(240, 7%, 97%);
+      border-radius: 5px;
+    }
+    .read-more {
+      display: block;
+      margin-top: 10px;
+      color: #f7f3f3;
+      text-decoration: none;
+    }
+    .view-all {
+      text-align: center;
+      margin: 60px 0;
+    }
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', serif;
+      color: #f5f4f4;
+    }
+      /*.navbar {
+        background: #020a10;
+        padding: 1rem 0;
+      }*/
+    .navbar {
+      background: linear-gradient(270deg, #000000, #0f5868);
+      background-size: 600% 600%;
+      padding: 1rem 0;
+      animation: navbarGradientFlow 10s ease infinite;
+    }
+
+    @keyframes navbarGradientFlow {
+      0% {
+      background-position: 0% 50%;
+    }
+      50% {
+      background-position: 100% 50%;
+    }
+      100% {
+      background-position: 0% 50%;
+    }
+    }
+
+
+
+      .navbar-brand {
+        color: #fff;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .nav-link {
+        color: #ffffff;
+        margin: 0 10px;
+      }
+      .nav-link:hover, .navbar-brand:hover {
+        color: #00d9ff;
+      }
+      .btn-theme {
+        background: linear-gradient(90deg, #5766f4, #8b43f5);
+        color: #fff;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 5px;
+      }
+
+      .hero-section {
+        text-align: center;
+        padding: 100px 0 50px;
+      }
+      .hero-section h1 {
+        font-size: 3rem;
+        line-height: 1.5;
+      }
+      .about-section {
+        padding: 60px 0;
+        text-align: center;
+      }
+      .about-img {
+        border: 8px solid #0b0b0b;
+        border-radius: 10px;
+        padding: 5px;
+        display: inline-block;
+        position: relative;
+      }
+
+      
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /*.service-box {
+      background-color: #060e68a0;
+      border: 2px solid transparent;
+      border-radius: 12px;
+      padding: 25px;
+      color: #ffffff;
+      
+      transition: 0.4s ease-in-out;
+    }
+
+    .service-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 40px rgba( 90, 225, 247, 0.2);
+    }*/
+
+
+    .service-box {
+      border: 2px solid #3ac7f2; /* Bright accent border */
+      border-radius: 1px;
+      padding: 25px;
+      color: #f0f8ff; /* Light, soft white-blue text */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Slight shadow */
+      transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    }
+
+    .service-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(58, 199, 242, 0.3);
+    }
+
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .service-icon img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .service-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .service-text {
+      font-size: 14px;
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .glow-blue {
+      border: 2px solid #00e0ff;
+      box-shadow: 0 0 20px #00e0ff;
+    }
+
+    .glow-purple {
+      border: 2px solid #a44afe;
+      box-shadow: 0 0 20px #a44afe;
+    }
+
+    .services-section {
+      padding: 80px 0;
+    }
+      .tab-btn {
+        border: 1px solid #00cfff;
+        background: transparent;
+        color: #fff;
+        margin: 5px;
+        padding: 5px 15px;
+        border-radius: 5px;
+      }
+      .glow-box {
+        background: #11114d;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+        margin-bottom: 30px;
+      }
+      .glow-box img {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .experience-icons i {
+        font-size: 2.5rem;
+        margin: 20px;
+      }
+      /*.contact-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #40c98e 0%, #a0d0c1 100%);
+      color: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20% 20% 0 0 ;
+      }*/
+      
+
+    /*.contact-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #4a9adc, #4a9adc, #a4ac98, #80b4a8);
+      background-size: 400% 400%;
+      animation: floatGradient 12s ease infinite;
+      color: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20% 20% 0 0;
+    }*/
+
+
+    .contact-section {
+      padding: 80px 0;
+      /*background: linear-gradient(135deg, #3ad793, #573dbd, #7fc425, #ccf2e9);*/
+      background: linear-gradient(-45deg, #3ad793, #210a7c, #12676c, #ccf2e9);
+      background-size: 400% 400%;
+      animation: floatGradient 12s ease infinite;
+      color: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20% 20% 0 0;
+    }
+
+    @keyframes floatGradient {
+       0% {
+       background-position: 0% 50%;
+    }
+       50% {
+       background-position: 100% 50%;
+    }
+       100% {
+       background-position: 0% 50%;
+    }
+    }
+   
+    /*.contact-section h2 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 60px;
+      color: #e80808;
+    }*/
+
+   .contact-section h2 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 60px;
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #120e0e, #0d0c08, #0b0f10);  
+    }
+
+
+    .contact-info h4 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .contact-info p {
+      color: #c52929;
+    }
+
+    .info-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .info-box i {
+      font-size: 20px;
+      color: white;
+      background: #0c0c0c;
+      padding: 15px;
+      border-radius: 15px;
+      margin-right: 15px;
+      
+    }
+
+    /*.contact-form {
+      background: linear-gradient(135deg, #4ce3a1, #21b360);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      border-radius: 5% ;
+    }*/
+
+
+    .contact-form {
+     background: linear-gradient(135deg, #4cbbe3, #49d1e6);
+     background-size: 300% 300%;
+     animation: contactFormFloat 15s ease-in-out infinite;
+      
+     padding: 30px;
+     border-radius: 5%;
+     box-shadow: 0 0 20px rgba(21, 164, 189, 0.2);
+    }
+
+    @keyframes contactFormFloat {
+      0% {
+      background-position: 0% 100%;
+    }
+      50% {
+      background-position: 100% 0%;
+    }
+      100% {
+      background-position: 0% 100%;
+    }
+    }
+
+    .form-control {
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+
+    .form-control::placeholder {
+      color: #aaa;
+    }
+
+    .btn-send {
+      background: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn-send:hover {
+      background: #333;
+    }
+
+    .footer {
+    
+      color: #ccc;
+
+      text-align: center;
+    }
+
+    /*.footer .social-icons a {
+      display: inline-block;
+      background: linear-gradient(135deg, #b33939, #cb1919);
+      color: white;
+      margin: 0 8px;
+      padding: 10px 14px;
+      border-radius: 15px;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }*/
+    .footer .social-icons a {
+      display: inline-block;
+      background: linear-gradient(270deg, #9e1a1a, #cb1919, #d55858, #b33939);
+      background-size: 300% 300%;
+      color: white;
+      margin: 0 8px;
+      padding: 10px 14px;
+      border-radius: 15px;
+      font-size: 18px;
+      transition: transform 0.3s;
+      animation: gradientFloat 6s ease infinite;
+    }
+
+    @keyframes gradientFloat {
+     0% {
+     background-position: 0% 50%;
+    }
+     50% {
+     background-position: 100% 50%;
+    }
+     100% {
+     background-position: 0% 50%;
+    }
+    }
+
+    .footer .social-icons a:hover {
+      transform: scale(1.1);
+    }
+
+    .footer-logo {
+      font-weight: bold;
+      font-size: 24px;
+      margin-top: 20px;
+      color: white;
+    }
+
+    .footer small {
+      display: block;
+      margin-top: 10px;
+    }
+
+  </style>
+  </head>
+  <body>
+   <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">POOJAN PATEL</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav">
+      
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Skills</a></li>
+            <li class="nav-item"><a class="btn btn-theme" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 
+    
+
+   <div class="hero" id="home">
+    <p>I AM</p>
+    <h1>Front-end<br/>Developer<span style="color:#00bfff"></span> </h1>
+    
+    <button class="btn btn-gradient mt-3 px-4 py-2">Previous Projects</button>
+  </div>
+<br>
+  <div class="container about-me " id="about">
+    <div class="row align-items-center text-center text-md-left">
+      <div class="col-md-4 mb-3 mb-md-0">
+        <img src="img/Poojan pro.jpg" alt="Profile" class="mx-auto d-block" />
+      </div>
+      <div class="col-md-8">
+        <h5 class="section-title">About Me</h5>
+        <p>  My name is Patel Poojan A, and I am Bachelor of Technology in
+          Computer Engineering (B.Tech)at the Sankalchand Patel University 
+          Visnagar My Computer your year 2022 and (CGPA 7.63) where I specialize 
+          in Front-end  development. I have developed a strong foundation in various
+          technologies, including HTML, CSS, Bootstrap, JavaScript, and ReactJS.
+          which is helping me build a solid foundation for a successful career in web development..</p>
+        <button class="btn btn-gradient mr-2 px-4 my-1">Hire Me</button>
+        <button class="btn btn-outline-light px-4 my-1">Resume</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolio-tabs" id="portfolio">
+    <h5 class="section-title">Portfolio</h5>
+    <a href="#">Tour and Travel</a>
+    <a href="#">E-commerce</a>
+    <a href="#">Landing Page</a>
+  </div>
+  <div class="container">
+    
+    <div class="row project align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-info">PROJECT 1</h6>
+        <h5>Responsive Tour and Travel Website  </h5>
+        <p>This Project 1 will design a dating app focusing on a user-friendly interface, strong security features, and a personalized matching algorithm, aiming to connect users with compatible partners in a safe and engaging way. The app will incorporate features like detailed profiles, verified user authentication, and a customizable matching system based on interests and preferences...</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="col-md-6">
+        <img src="img/Tour and Travel Website.jpg" alt="Project 1" />
+      </div> 
+    </div>
+
+  
+    <div class="row project align-items-center flex-md-row-reverse">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-info">PROJECT 2</h6>
+        <h5>E-commerce Product Page </h5>
+        <p>An e-commerce mobile app design should focus on providing a seamless and intuitive shopping experience. Key elements include clear navigation, a robust search function, comprehensive product catalogs with detailed information, filtering and sorting options, user-friendly product pages, secure authentication and checkout processes. The app should also prioritize user interface (UI) aesthetics, including color palettes, fonts, and overall style, along with a thoughtful user experience (UX) design that prioritizes functionality and ease of use...</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="col-md-6">
+        <img src="img/E-commerce Product Page.png" alt="Project 2" />
+      </div>
+    </div>
+
+   
+    <div class="row project align-items-center">
+      <div class="col-md-6 mb-4 mb-md-0">
+        <h6 class="text-info">PROJECT 3</h6>
+        <h5>Landing Page</h5>
+        <p>A landing page is a standalone web page designed for a specific purpose-typically to drive conversions, generate leads, or promote a product, service, or event. Unlike a homepage, which serves as a general entry point to a website, a landing page is focused on a single goal and usually contains persuasive elements like strong calls to action, compelling visuals, and minimal distractions.</p>
+        <a href="#" class="read-more">Read more</a>
+      </div>
+      <div class="col-md-6">
+        <img src="img/Landing Page.jpg" alt="Project 3" />
+      </div>
+    </div>
+
+    <div class="view-all">
+      <button class="btn btn-gradient px-5 py-2">View all</button>
+    </div>
+  </div>
+<br>
+<br>
+   <div class="container services-section" id="services">
+    <h2 class="section-title">Services</h2>
+    <div class="row">
+    
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/video-editing.png" alt="Video Editing">
+          </div>
+          <div class="service-title">Photo Editing</div>
+          <div class="service-text">
+          Video editing involves manipulating and arranging video footage, audio, and other visual elements to create a cohesive and engaging final product. It's a crucial post-production step in filmmaking, television, and various other video-related fields, impacting the overall viewing experience and influencing the emotional connection with the audience...
+          </div>
+        </div>
+      </div>
+
+ 
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/smartphone-tablet.png" alt="Mobile App">
+          </div>
+          <div class="service-title">Mobile App Development</div>
+          <div class="service-text">
+            Mobile app development is the process of creating software applications designed to run on mobile devices like smartphones and tablets. It involves various stages, including planning, design, development, testing, and release, encompassing everything from initial concept to deployment in app stores. These applications offer users convenient access to services, information..
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/monitor.png" alt="Desktop App">
+          </div>
+          <div class="service-title">Desktop App Development</div>
+          <div class="service-text">
+          Desktop app development involves creating software that runs on computers, like Windows, macOS, or Linux, without needing an internet connection. These applications are designed for use on desktops and laptops and can often access hardware drivers, making them ideal for tasks like media editing or specialized software where offline functionality is crucial..
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-6 col-lg-6 mb-4">
+        <div class="service-box">
+          <div class="service-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/code.png" alt="Programming">
+          </div>
+          <div class="service-title">Video Shoot</div>
+          <div class="service-text">
+        Let’s start with the absolute basics, because if you want to shoot good video, you have to be technically proficient. 1. Shoot in Manual While cameras are getting better at automatically finding the right settings for you when you press record, if you really want to be technically proficient you’ll have to learn how to do it manually.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<br>
+    <section id="experience" class="section text-center" >
+      <div class="container">
+     <h2>SKILLS</h2>
+      <div class="row mt-4">
+        <div class="col">
+            <i class="fab fa-html5 fa-4x"></i>
+            <p>HTML</p>
+          </div>
+          <div class="col">
+            <i class="fab fa-css3-alt fa-4x"></i>
+            <p>CSS</p>
+          </div>
+          <div class="col">
+            <i class="fab fa-4x fa-bootstrap"></i>
+            <p>Bootstrap</p>
+          </div>
+          <div class="col">
+            <i class="fab fa-js-square fa-4x"></i>
+            <p>JavaScript</p>
+          </div>
+          <div class="col">
+            <i class="fab fa-react fa-4x"></i>
+            <p>React</p>
+          </div>          
+          </div>
+          </div>
+    </section>
+  
+   <section id="contact" class="contact-section">
+    <div class="container">
+      <h2>CONTACT</h2>
+      <div class="row">
+        <div class="col-md-6 contact-info">
+          <h4>Drop Me a Message</h4>          
+
+          <div class="info-box">
+            <i class="fas fa-phone"></i>
+            <span>+91 8140820398 <br> +91 6354165861</span> 
+           
+          </div>
+          <div class="info-box">
+            <i class="fas fa-envelope"></i>
+            <span>patelpoojan3820@gmail.com</span>
+          </div>
+          <div class="info-box">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>  Umiya Circle Nikol, Aemedabad,<br>382350, india</span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <form class="contact-form">
+            <input type="text" class="form-control" placeholder="Name">
+            <input type="email" class="form-control" placeholder="Email">
+            <textarea rows="4" class="form-control" placeholder="Message"></textarea>
+            <button type="submit" class="btn btn-send">Send</button>
+            
+          </form>
+        </div>
+      </div>
+    </div>
+ <footer class="footer  text-white py-3">
+  <div class="container">
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-center">
+      <div class="footer-logo mb-2 mb-md-0"><B></B></div>
+      <div class="social-icons mb-2 mb-md-0">
+        <a href="#" class="text-white mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+</section>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
